@@ -1,12 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    allalalalalala
-</body>
-</html>
+{% extends 'shared/base_logado.html' %}
+
+{% block conteudo %}
+
+    <!-- <p>{{ pessoa.nome }}</p> -->
+    <div>
+        {% if pessoa.experiencia is None %}
+            <p>Você não cadastrou experiencias. 
+                <a href="/experiencia/{{ pessoa.id }}">Clique aqui</a> para cadastrar.
+                (A listagem não funciona ainda)
+            </p>
+        {% else %}
+        <ul>
+            {% for x in pessoa.experiencia %}
+            <li>
+                <p>{{ x }}</p>
+            </li>
+            {% endfor %}
+        </ul>
+        <a href="/experiencia/{{ pessoa.id }}">Clique aqui</a> para cadastrar mais!!
+        {% endif %}
+    </div>
+
+    <div>
+        <h2>Conteúdos mais pesquisados:</h2>
+        <ul>
+            <li><a href="/conteudo/{{ pessoa.id }}">Python</a></li>
+            <li><a href="#">Java</a></li>
+            <li><a href="#">HTML, CSS e Javascript</a></li>
+            <li><a href="#">Django</a></li>
+            <li><a href="#">Mobile</a></li>
+        </ul>
+    </div>
+    <section>
+        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit saepe minima, similique atque, reiciendis doloribus fuga perferendis fugit dolores nisi perspiciatis numquam eveniet dolorem, deleniti praesentium debitis quidem ipsum inventore!</P>
+        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit saepe minima, similique atque, reiciendis doloribus fuga perferendis fugit dolores nisi perspiciatis numquam eveniet dolorem, deleniti praesentium debitis quidem ipsum inventore!</P>
+        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit saepe minima, similique atque, reiciendis doloribus fuga perferendis fugit dolores nisi perspiciatis numquam eveniet dolorem, deleniti praesentium debitis quidem ipsum inventore!</P>
+        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit saepe minima, similique atque, reiciendis doloribus fuga perferendis fugit dolores nisi perspiciatis numquam eveniet dolorem, deleniti praesentium debitis quidem ipsum inventore!</P>
+        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit saepe minima, similique atque, reiciendis doloribus fuga perferendis fugit dolores nisi perspiciatis numquam eveniet dolorem, deleniti praesentium debitis quidem ipsum inventore!</P>
+        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit saepe minima, similique atque, reiciendis doloribus fuga perferendis fugit dolores nisi perspiciatis numquam eveniet dolorem, deleniti praesentium debitis quidem ipsum inventore!</P>
+        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit saepe minima, similique atque, reiciendis doloribus fuga perferendis fugit dolores nisi perspiciatis numquam eveniet dolorem, deleniti praesentium debitis quidem ipsum inventore!</P>
+        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit saepe minima, similique atque, reiciendis doloribus fuga perferendis fugit dolores nisi perspiciatis numquam eveniet dolorem, deleniti praesentium debitis quidem ipsum inventore!</P>
+        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit saepe minima, similique atque, reiciendis doloribus fuga perferendis fugit dolores nisi perspiciatis numquam eveniet dolorem, deleniti praesentium debitis quidem ipsum inventore!</P>
+        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit saepe minima, similique atque, reiciendis doloribus fuga perferendis fugit dolores nisi perspiciatis numquam eveniet dolorem, deleniti praesentium debitis quidem ipsum inventore!</P>
+        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit saepe minima, similique atque, reiciendis doloribus fuga perferendis fugit dolores nisi perspiciatis numquam eveniet dolorem, deleniti praesentium debitis quidem ipsum inventore!</P>
+        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit saepe minima, similique atque, reiciendis doloribus fuga perferendis fugit dolores nisi perspiciatis numquam eveniet dolorem, deleniti praesentium debitis quidem ipsum inventore!</P>
+        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit saepe minima, similique atque, reiciendis doloribus fuga perferendis fugit dolores nisi perspiciatis numquam eveniet dolorem, deleniti praesentium debitis quidem ipsum inventore!</P>
+        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit saepe minima, similique atque, reiciendis doloribus fuga perferendis fugit dolores nisi perspiciatis numquam eveniet dolorem, deleniti praesentium debitis quidem ipsum inventore!</P>
+    </section>
+
+{% endblock %}

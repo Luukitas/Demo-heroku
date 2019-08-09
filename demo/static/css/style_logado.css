@@ -1,0 +1,61 @@
+body{
+    display: grid;
+    font-family: 'Montserrat', sans-serif;
+    grid-template-areas: 'nav nav nav nav'
+                        'aside main main main'
+                        'aside main main main'
+                        'footer footer footer footer';
+    grid-template-columns: 25% auto auto auto; 
+    margin: 0;
+}
+
+nav{
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    grid-area: nav;
+    justify-content: center;
+}
+
+aside{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    grid-area: aside;
+    justify-content: flex-start;
+}
+
+main{
+    grid-area: main;
+}
+
+.logo{
+    font-family: 'Assistant', sans-serif;
+    font-size: 15px;
+}
+
+.green{
+    color: rgb(6, 247, 6);
+    font-family: 'Liu Jian Mao Cao', cursive;
+    font-size: 30px;
+    margin: 0 0 0 -2px;
+}
+
+.sticky{
+    align-items: center;
+    background-color: #FFF;
+    border-bottom: 1px solid gray;
+    display: flex;
+    flex-direction: initial;
+    justify-content: space-evenly;
+    position: sticky;
+    top: 0;
+}
+
+.sticky ul{
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    width: 100%;
+}

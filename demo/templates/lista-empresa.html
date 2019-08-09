@@ -1,0 +1,22 @@
+{% extends 'shared/base_logado.html' %}
+
+{% block conteudo %}
+
+<section>
+    <h2>Lista de Empresas</h2>
+    <form action="/list-empresa" method="post">
+        {% csrf_token %}
+        <input type="text" name='empresa'>
+        <input type="submit" value="Enviar">
+    </form>
+    <p>{{ msg }}</p>
+    <ul>
+        {% for empresa in empresas %}
+        <li><a href="/empresa/{{empresa.id}}">
+                <p>{{ empresa.nome }}</p>
+            </a></li>
+        {% endfor %}
+    </ul>
+</section>
+
+{% endblock %}
