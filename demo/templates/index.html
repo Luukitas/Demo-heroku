@@ -1,32 +1,230 @@
 {% load static %}
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/bdc2bc64ed.js"></script>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script defer src="{% static 'js/script.js' %}"></script>
     <title>Document</title>
 </head>
 <body>
-    <nav class="navbar-index">
-        <h1>Emprega+</h1>
-        <ul>
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
-            <li><a href="/cad-empresa">Cadastre sua empresa</a></li>
-        </ul>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#">Emprega<b>+</b></a>
+        </div>
+
+        <div class="options">
+            <a href="#">Empresas</a>
+            <a href="#">Candidatos</a>
+            <a href="#">Vagas</a>
+            <a href="#">Cadastrar</a>
+            <a href="/login">Entrar</a>
+        </div>
     </nav>
-    <header class="back-index">
-        <div>
-            <h2>Bla bla bla Bla bla bla Bla bla bla Bla bla bla</h2>
+
+    <section class="v-header container">
+        <div class="fullscreen-video-wrap">
+            <video src="static/video/NycTraffic.mp4" autoplay="true" loop="true"></video>
         </div>
-        <div>
-            <a href="/login" class="bt-log-index">Faça seu login</a>
+        <div class="header-overlay"></div>
+        <div class="header-content">
+            <h1>Bem Vindo a Emprega<b>+</b></h1>
+            <p>As melhores <a href="#" class="redirect-people">vagas</a> de trabalho e os melhores <a href="" class="redirect-companies">candidatos</a> você encontra aqui!</p>
+            <a href="" class="btn"> Sou Empresa </a>
+            <a href="" class="btn">Sou Candidato</a>
         </div>
-    </header>
+    </section>
+
+    <section class="section section-a">
+        <h2>Etapas para candidatos</h2>
+        <div class="container second-container">
+            <div class="box">
+                <div class="icon"><i class="far fa-address-card"></i></div>
+                <div class="content">
+                    <h3>Etapa 1</h3>
+                    <p>Realize seu cadastro na Emprega<b>+</b> Preencha todos os dados com nome, area de interesse, endereço etc. Lembrando que precisamos de todos os dados preenchidos para realizar a prova avaliativa.</p>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="icon"><i class="fas fa-feather"></i></div>
+                <div class="content">
+                    <h3>Etapa2</h3>
+                    <p>Realize nosso exame avaliativo para verificarmos o seu nivel de dominio de cada habilidade que nossas empresas parceiras solicitaram.</p>
+                    </div>
+            </div>
+
+            <div class="box">
+                <div class="icon"><i class="fas fa-user-tie"></i></div>
+                <div class="content">
+                    <h3>Etapa 3</h3>
+                    <p>Caso você se saia bem nos testes diversas empresas entrarão em contato com você através de nossa plataforma, e você também podera marcar as empresas que tem mais interesse de trabalhar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-b">
+        <div class="inside-section-b">
+            <div>
+                <h2>Por que você deveria se juntar a Emprega<b>+</b> e continuar conosco no longo prazo?</h2>
+                <p>A Emprega<b>+</b> possui as vagas ideais para você em todos os lugares do pais. Você pode ser um desenvolvedor Front-End, Back-End, Full-Stack ou um analista financeiro ou mesmo um profissional do marketing, aqui temos a sua vaga ideal e treinamentos incriveis para que você chegue onde quer chegar!</p>
+            </div>
+
+            <h4>Algumas das Nossas Vagas</h4>
+            <div class="another-box">
+
+                <div>
+                    <h5>Negócios</h5>
+                    <ul>
+                        <li>Consultoria</li>
+                        <li>Analista financeiro</li>
+                        <li>Investidor</li>
+                    </ul>
+                </div>
+
+                <div>                
+                    <h5>Marketing Online</h5>
+                    <ul>
+                        <li>SEO</li>
+                        <li>Conteudo</li>
+                        <li>SEM</li>
+                        <li>Growth Hacker</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5>Desenvolvedores</h5>
+                    <ul>
+                        <li>Back-end</li>
+                        <li>Front-End</li>
+                        <li>Full-Stack</li>
+                        <li>Mobile</li>
+                        <li>Analista de Sitemas</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5>Professores</h5>
+                    <ul>
+                        <li>Matematica</li>
+                        <li>História</li>
+                        <li>Geografia</li>
+                        <li>Português</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5>Medicina</h5>
+                    <ul>
+                        <li>Clinico Geral</li>
+                        <li>Gastroenterologo</li>
+                        <li>Cirurgião</li>
+                        <li>Pediatra</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-c">
+        <div class="container">
+            <div class="our-team">
+                <div id="person1" class="brief">
+                        <h2>Depoimentos</h2>
+                    <p>Através da resolução de testes avaliativos a Emprega+ auxilia empresas com demanda por gente talentosa e com fome de crescimento!Através da resolução de testes avaliativos a Emprega+ auxilia empresas com demanda por gente talentosa e com fome de crescimento!Através da resolução de testes avaliativos a Emprega+ auxilia empresas com demanda por gente talentosa e com fome de crescimento!</p>
+                    <span class="border">Estudante Estação Hack</span>
+                    <h2 class="name">Matheus Gomes de Moura</h2>
+                </div>
+
+                <div id="person2" class="brief">
+                    <h2>Depoimentos</h2>
+                    <p>Através destes mesmos testes, verificamos os pontos onde o candidato pode melhorar e realizamos um treinamento direto ao ponto!Através da resolução de testes avaliativos a Emprega+ auxilia empresas com demanda 
+                    por gente talentosa e com fome de crescimento!Através da resolução de testes avaliativos a Emprega+ auxilia empresas com demanda por gente talentosa e com fome de crescimento!</p>
+                    <span class="border">Estudante Estação Hack</span>
+                    <h2 class="name">Geovanni</h2>
+                </div>
+
+                <div id="person3" class="brief">
+                    <h2>Depoimentos</h2>
+                    <p>Através destes mesmos testes, verificamos os pontos onde o candidato pode melhorar e realizamos um treinamento direto ao ponto!Através da resolução de testes avaliativos a Emprega+ auxilia empresas com demanda por gente talentosa e com fome de crescimento!Através da resolução de testes avaliativos a Emprega+ auxilia empresas com demanda por gente talentosa e com fome 
+                    de crescimento!</p>
+                    <span class="border">Estudante Estação Hack</span>
+                    <h2 class="name">Thamirys</h2>
+                </div>
+
+                <div id="person4" class="brief">
+                    <h2>Depoimentos</h2>
+                    <p>Através da resolução de testes avaliativos a Emprega+ auxilia empresas com demanda por gente talentosa e com fome de crescimento!Através da resolução de testes avaliativos a Emprega+ auxilia empresas com demanda por gente talentosa e com fome de crescimento!Através da resolução de testes avaliativos a Emprega+ auxilia empresas com demanda por gente talentosa e com fome 
+                    de crescimento!</p>
+                    <span class="border">Estudante Estação Hack</span>
+                    <h2 class="name">Estevan</h2>
+                </div>
+
+                <div id="person5" class="brief">
+                    <h2>Depoimentos</h2>
+                    <p>Através da resolução de testes avaliativos a Emprega+ auxilia empresas com demanda por gente talentosa e com fome de crescimento!Através da resolução de testes avaliativos a Emprega+ auxilia empresas com demanda por gente talentosa e com fome de crescimento!Através da resolução de testes avaliativos a Emprega+ auxilia empresas com demanda por gente talentosa e com fome 
+                    de crescimento!</p>
+                    <span class="border">Estudante Estação Hack</span>
+                    <h2 class="name">Lucas</h2>
+                </div>
+            </div>
+
+            <div class="persons">
+                    <a href="#person1"><img src="imgs/matheus.jpg" alt=""></a>
+                    <a href="#person2"><img src="imgs/geovanni.jpg" alt=""></a>
+                    <a href="#person3"><img src="imgs/thamirys.jpg" alt=""></a>
+                    <a href="#person4"><img src="imgs/estevan.jpg" alt=""></a>
+                    <a href="#person5"><img src="imgs/matheus.jpg" alt=""></a>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer">
+            <div class="column ">
+                <a href="" class="highlight flex-box">Emprega+</a>
+                <a href="#" class="flex-box" class="flex-box">Trabalhe Conosco</a>
+                <a href="#" class="flex-box">Nossa História</a>
+                <a href="#" class="flex-box">Sac</a>
+                <a href="#" class="flex-box">Termos de Uso</a>
+            </div>
+
+            <div class="column">
+                <a href="#" class="highlight flex-box">Para Empresas</a>
+                <a href="#" class="flex-box">Funcionamento</a>
+                <a href="#" class="flex-box">Histórias de Sucesso</a>
+                <a href="#" class="flex-box">Dúvidas</a>
+            </div>
+
+            <div class="column">
+                <a href="#" class="highlight">Para Candidatos</a>
+                <a href="#" class="flex-box">Funcionamento</a>
+                <a href="#" class="flex-box">Histórias de Sucesso</a>
+                <a href="#" class="flex-box">Dúvidas</a>
+            </div>
+
+            <div class="column">
+                <a href="#" class="highlight">Contato</a>
+                <p>+55 (11) 91234-1234</p>
+                <p>Estação Hack, Avenida Paulista 5° Andar</p>
+                <p>Email: Atendimento@empregamais.com</p>
+            </div>
+        </div>
+
+        <div class="small-line">
+            <p>© 2019 Emprega<b>+</b>. Todos os direitos reservados</p>
+            <div class="networks" class="case">
+                    <a href="#" target="_blank" title="Linkedin"><img class="sn" src="imgs/linkedin-letters.png" alt="Linkedin" title="Notify on Linkedin"></a>
+                    <a href="#" target="_blank" title="twitter"><img class="sn" src="imgs/twitter.png" alt="Tweeter"></a>
+                    <a href="#" target="_blank" title="Youtube"> <img class="sn" src="imgs/youtube-logo.png" alt="Youtube"></a>
+                    <a href="#" target="_blank" title=" Facebook"><img class="sn" src="imgs/facebook-logo.png" alt="Facebook"></a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

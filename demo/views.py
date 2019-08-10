@@ -53,7 +53,7 @@ def login(request):
         usuario = Pessoa.objects.filter(email=email_form).first()
         # exp = Exp_pessoa.objects.filter(experiencia__exact=usuario.email).all()
         senha = usuario.senha
-        print('foi aqui')
+        print(senha_form)
         
         
         # for each in usuario.experiencia:
