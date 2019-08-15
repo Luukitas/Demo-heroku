@@ -24,6 +24,14 @@ aside{
     flex-direction: column;
     grid-area: aside;
     justify-content: flex-start;
+    padding: 10px 0;
+}
+
+aside img{
+    border: 5px solid rgb(169, 41, 255);
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
 }
 
 main{

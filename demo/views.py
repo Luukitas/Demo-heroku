@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from demo.models import Pessoa, Empresa, Exp_pessoa
+from .forms import *
 
 # Create your views here.
 
@@ -7,43 +8,16 @@ def index(request):
     return render(request, 'index.html')
 
 def cadastrar(request):
-    contexto = {}
-    if(request.method == 'POST'):
-        usuario = Pessoa()
-        usuario.nome = request.POST.get('nome')
-        usuario.email = request.POST.get('email')
-        usuario.senha = request.POST.get('senha')
-        usuario.dt_nasc = request.POST.get('dt_nasc')
-        usuario.save()
-        contexto = {
-            'msg': 'Salvo com sucesso'
-        }
-        print('Deu certo')
-        return redirect('/')
-
-    return render(request, 'cadastro.html', contexto)
-
-def experiencia(request, id):
-    contexto = {
-        'id': id
-    }
-    print('aq')
     if request.method == 'POST':
-        pessoa = Pessoa()
-        user = Pessoa.objects.filter(id=id).first()
-        nome = user.nome
-        exp = Exp_pessoa()
-        exp.experiencia = user
-        exp.valores = request.POST.get('exp')
-        exp.save()
-        print('ve se foi')
-        contexto = {
-            'id': id,
-            'msg': 'Salvo com sucesso'
-        }
-        valor = '/experiencia/' + str(id)
-        return redirect(valor)
-    return render(request, 'experiencia.html', contexto)
+        form = UsuarioForm(request.POST, request.FILES)
+
+        if form.is_valid():
+            form.save()
+            return redirect('/')   
+    else:
+        form = UsuarioForm()
+
+    return render(request, 'cadastro.html', {'form': form})
 
 def login(request):
     contexto = {}
@@ -51,13 +25,9 @@ def login(request):
         email_form = request.POST.get('email')
         senha_form = request.POST.get('senha')
         usuario = Pessoa.objects.filter(email=email_form).first()
-        # exp = Exp_pessoa.objects.filter(experiencia__exact=usuario.email).all()
         senha = usuario.senha
         print(senha_form)
         
-        
-        # for each in usuario.experiencia:
-
     
         if usuario is None:
             print('deu ruim')
@@ -72,8 +42,7 @@ def login(request):
                 'pessoa': usuario,
                 # 'exp': exp,
             }
-            valor = '/usuario/' + str(usuario.id)
-            return redirect(valor) 
+            return render(request, 'usuario.html', contexto)
 
     return render(request, 'login.html', {})
 
@@ -84,54 +53,14 @@ def usuario(request, id):
     }
     return render(request, 'usuario.html', contexto)
 
-def conteudo(request, id):
-    pessoa = Pessoa.objects.filter(id=id).first()
-    contexto = {
-        'pessoa': pessoa
-    }
-    return render(request, 'conteudo.html', contexto)
-
 def cadastra_empresa(request):
-    contexto = {}
     if request.method == 'POST':
-        empresa = Empresa()
-        empresa.nome = request.POST.get('nome')
-        empresa.senha = request.POST.get('senha')
-        empresa.linguagens = request.POST.get('linguagens')
-        empresa.save()
-        print('eeba')
-        contexto = {'msg': 'salvo com sucesso'}
-        return redirect('/')
-    
-    return render(request, 'cad-empresa.html', contexto)
+        form = EmpresaForm(request.POST, request.FILES)
 
-def procura_empresa(request):
-    contexto = {}
-    if request.method == 'POST':
-        empresa_form = request.POST.get('empresa')
-        empresas = Empresa.objects.filter(nome__icontains=empresa_form).all()
+        if form.is_valid():
+            form.save()
+            return redirect('/')   
+    else:
+        form = EmpresaForm()
 
-        if empresa_form == "":
-            contexto = {'msg': 'Digite algo'}
-            return render(request, 'lista-empresa.html', contexto)
-        elif empresas is None:
-            contexto = {'msg': 'Empresa não encontrada'}
-            return render(request, 'lista-empresa.html', contexto)
-        else:
-            contexto = {
-                'empresas': empresas
-            }
-            return render(request, 'lista-empresa.html', contexto)
-
-    return render(request, 'lista-empresa.html', contexto)
-
-def pagina_empr(request, id):
-    empresa = Empresa.objects.filter(id=id).first()
-    contexto = {}
-    if empresa is not None:
-        contexto = {
-            'empresa' : empresa
-        }
-        return render(request, 'empresa.html', contexto)
-    return render(request, 'empresa.html', contexto)
-    
+    return render(request, 'cad-empresa.html', {'form': form})

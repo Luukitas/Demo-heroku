@@ -5,24 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../static/js/script.js"></script>
     <title>Document</title>
 </head>
 
 <body>
-    <form action="/cad-empresa" method="POST">
+    <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
-        <div>
-            <label>Nome:</label>
-            <input type='text' name="nome">
-        </div>
-        <div>
-            <label>Senha:</label>
-            <input type='password' name="senha">
-        </div>
-        <div>
-            <label>Digite aqui as linguagens mais usadas na sua empresa:</label>
-            <textarea name='linguagens' cols="40" rows="10"></textarea>
-        </div>
+        {{ form.as_p }}
         <input type="submit" value='Cadastrar'>
     </form>
 </body>

@@ -1,5 +1,8 @@
 from django.urls import path, include
-from demo.views import index, login, cadastrar, experiencia, cadastra_empresa, procura_empresa, pagina_empr, usuario, conteudo
+from django.conf import settings
+from django.conf.urls.static import static
+from demo.views import *
+from demo.usuario import *
 
 urlpatterns = [
     path('', index),
@@ -8,7 +11,10 @@ urlpatterns = [
     path('usuario/<int:id>', usuario),
     path('experiencia/<int:id>', experiencia),
     path('cad-empresa', cadastra_empresa),
-    path('list-empresa', procura_empresa),
-    path('empresa/<int:id>', pagina_empr),
-    path('conteudo/<int:id>', conteudo)
+    path('list-empresa/<int:id>', procura_empresa),
+    path('empresa/<int:id>/<str:name>', pagina_empr),
+    path('conteudo', conteudo)
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)

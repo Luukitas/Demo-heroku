@@ -4,7 +4,7 @@
 
 <section>
     <h2>Lista de Empresas</h2>
-    <form action="/list-empresa" method="post">
+    <form action="/list-empresa/{{ pessoa.id }}" method="post">
         {% csrf_token %}
         <input type="text" name='empresa'>
         <input type="submit" value="Enviar">
@@ -12,8 +12,8 @@
     <p>{{ msg }}</p>
     <ul>
         {% for empresa in empresas %}
-        <li><a href="/empresa/{{empresa.id}}">
-                <p>{{ empresa.nome }}</p>
+        <li><a href="/empresa/{{ pessoa.id }}/{{empresa.nome}}">
+                <p>{{ empresa }}</p>
             </a></li>
         {% endfor %}
     </ul>

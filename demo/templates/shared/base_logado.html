@@ -18,8 +18,9 @@
     </nav>
 
     <aside>
+        <img src="{{ pessoa.img_perfil.url }}">
         <h2>{{ pessoa.nome }}</h2>
-        <p>profissão</p>
+        <p>{{ pessoa.profissao }}</p>
         <p>{{ pessoa.dt_nasc }}</p>
         <a href="/">sair</a>
     </aside>
@@ -28,7 +29,7 @@
         <nav class="sticky">
             <ul>
                 <li><a href="/usuario/{{ pessoa.id }}">Pagina principal</a></li>
-                <li><a href="/list-empresa">Busque por empresas</a></li>
+                <li><a href="/list-empresa/{{ pessoa.id }}">Busque por empresas</a></li>
             </ul>
         </nav>
         {% block conteudo %}
