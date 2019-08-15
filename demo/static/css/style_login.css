@@ -1,0 +1,111 @@
+section{
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: space-between;
+}
+
+.bg-banner{
+    align-items: center;
+    background-image: url('../imgs/back-inicial.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 50%;
+}
+
+.bg-banner h2{
+    color: #fff;
+}
+
+.log{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    width: 50%;
+}
+
+.log div{
+    display: flex;
+    flex-direction: column;
+}
+
+.log form{
+    width: 80%;
+}
+
+.log input[type= 'email'], input[type= 'password']{
+    border: none;
+    border-bottom: 1px solid #000;
+    font-size: 19px;
+    margin: 5px 0;
+    padding: 5px 0;
+    width: 100%;
+}
+
+.log input[type='email']:focus, input[type='password']:focus{
+    border-bottom: 2px solid #000;
+    transition: 1s ease-out;
+    outline: none;
+}
+
+.log input[type='submit']{
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 8px;
+    color: #000;
+    cursor: pointer;
+    font-size: 15px;
+    height: 40px;
+    margin: 10px 0;
+    width: 100px;
+}
+
+.log input[type='submit']:hover{
+    background-color: rgb(245, 245, 245);
+}
+
+.center{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.oferecim{
+    align-items: center;
+}
+
+.oferecim p{
+    font-size: 8px;
+}
+
+.oferecim img{
+    width: 130px;
+}
+
+.alert{
+    color: red;
+    padding: 10px;
+}
+
+@media only screen and (max-width: 500px){
+    .bg-banner{
+        display: none;
+    }
+
+    .log{
+        width: 100%;
+    }
+
+    .log form{
+        width: 80vw;
+    }
+
+    .log input[type= 'email'], input[type= 'password']{
+        width: 100%;
+    }
+}
