@@ -13,7 +13,7 @@ urlpatterns = [
     path('cad-empresa', cadastra_empresa),
     path('list-empresa/<int:id>', procura_empresa),
     path('empresa/<int:id>/<str:name>', pagina_empr),
-    path('conteudo', conteudo)
+    path('conteudo/<int:id>', conteudo)
 ]
 
 if settings.DEBUG:

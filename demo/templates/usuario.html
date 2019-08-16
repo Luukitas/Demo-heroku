@@ -2,8 +2,8 @@
 
 {% block conteudo %}
 
-    <!-- <p>{{ pessoa.nome }}</p> -->
-    <!-- <div>
+<!-- <p>{{ pessoa.nome }}</p> -->
+<!-- <div>
         {% if pessoa.experiencia is None %}
             <p>Você não cadastrou experiencias. 
                 <a href="/experiencia/{{ pessoa.id }}">Clique aqui</a> para cadastrar.
@@ -21,31 +21,70 @@
         {% endif %}
     </div> -->
 
+<div class="conteudo">
+    <h2>Conteúdos mais pesquisados:</h2>
+    <ul>
+        <li class="li-c1">
+            <div class="img">
+                <img src="../static/imgs/icone_py_branco.png" alt="python">
+            </div>
+            <a href="/conteudo/{{ pessoa.id }}">Python</a>
+        </li>
+        <li class="li-c2">
+            <div class="img">
+                <img src="../static/imgs/icone_html_branco.png" alt="html">
+                <p>|</p>
+                <img src="../static/imgs/icone_css_branco.png" alt="css">
+            </div>
+            <a href="#">HTML, CSS e Javascript</a>
+        </li>
+        <li class="li-c3">
+            <div class="img">
+                <img src="../static/imgs/icone_java_branco.png" alt="java">
+            </div>
+            <a href="#">Java</a>
+        </li>
+    </ul>
+</div>
+<section class="exercicios">
+    <h2>Exercicios</h2>
     <div>
-        <h2>Conteúdos mais pesquisados:</h2>
-        <ul>
-            <li><a href="/conteudo">Python</a></li>
-            <li><a href="#">Java</a></li>
-            <li><a href="#">HTML, CSS e Javascript</a></li>
-            <li><a href="#">Django</a></li>
-            <li><a href="#">Mobile</a></li>
-        </ul>
+        <div class="exercicio-w-img">
+            <img src="../static/imgs/icone_py.png" alt="python">
+        </div>
+        <div class="column-start">
+            <a href="#">
+                <h3>Python</h3>
+                <p>Faça exercícios de Python para treinar e mostrar para as empresas a sua experiência</p>
+            </a>
+        </div>
     </div>
-    <section>
-        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit saepe minima, similique atque, reiciendis doloribus fuga perferendis fugit dolores nisi perspiciatis numquam eveniet dolorem, deleniti praesentium debitis quidem ipsum inventore!</P>
-        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit saepe minima, similique atque, reiciendis doloribus fuga perferendis fugit dolores nisi perspiciatis numquam eveniet dolorem, deleniti praesentium debitis quidem ipsum inventore!</P>
-        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit saepe minima, similique atque, reiciendis doloribus fuga perferendis fugit dolores nisi perspiciatis numquam eveniet dolorem, deleniti praesentium debitis quidem ipsum inventore!</P>
-        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit saepe minima, similique atque, reiciendis doloribus fuga perferendis fugit dolores nisi perspiciatis numquam eveniet dolorem, deleniti praesentium debitis quidem ipsum inventore!</P>
-        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit saepe minima, similique atque, reiciendis doloribus fuga perferendis fugit dolores nisi perspiciatis numquam eveniet dolorem, deleniti praesentium debitis quidem ipsum inventore!</P>
-        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit saepe minima, similique atque, reiciendis doloribus fuga perferendis fugit dolores nisi perspiciatis numquam eveniet dolorem, deleniti praesentium debitis quidem ipsum inventore!</P>
-        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit saepe minima, similique atque, reiciendis doloribus fuga perferendis fugit dolores nisi perspiciatis numquam eveniet dolorem, deleniti praesentium debitis quidem ipsum inventore!</P>
-        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit saepe minima, similique atque, reiciendis doloribus fuga perferendis fugit dolores nisi perspiciatis numquam eveniet dolorem, deleniti praesentium debitis quidem ipsum inventore!</P>
-        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit saepe minima, similique atque, reiciendis doloribus fuga perferendis fugit dolores nisi perspiciatis numquam eveniet dolorem, deleniti praesentium debitis quidem ipsum inventore!</P>
-        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit saepe minima, similique atque, reiciendis doloribus fuga perferendis fugit dolores nisi perspiciatis numquam eveniet dolorem, deleniti praesentium debitis quidem ipsum inventore!</P>
-        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit saepe minima, similique atque, reiciendis doloribus fuga perferendis fugit dolores nisi perspiciatis numquam eveniet dolorem, deleniti praesentium debitis quidem ipsum inventore!</P>
-        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit saepe minima, similique atque, reiciendis doloribus fuga perferendis fugit dolores nisi perspiciatis numquam eveniet dolorem, deleniti praesentium debitis quidem ipsum inventore!</P>
-        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit saepe minima, similique atque, reiciendis doloribus fuga perferendis fugit dolores nisi perspiciatis numquam eveniet dolorem, deleniti praesentium debitis quidem ipsum inventore!</P>
-        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit saepe minima, similique atque, reiciendis doloribus fuga perferendis fugit dolores nisi perspiciatis numquam eveniet dolorem, deleniti praesentium debitis quidem ipsum inventore!</P>
-    </section>
+    <div>
+        <div class="exercicio-w-img">
+            <img src="../static/imgs/icone_html.png" alt="html">
+            <p>|</p>
+            <img src="../static/imgs/icone_css.png" alt="css">
+        </div>
+        <div class="column-start">
+            <a href>
+                <h3>HTML e CSS</h3>
+                <p>Faça exercícios de desenvolvimento web para treinar e mostrar para as empresas a sua experiência</p>
+            </a>
+        </div>
+    </div>
+    <div>
+        <div class="exercicio-w-img">
+            <img src="../static/imgs/icone_java.png" alt="python">
+        </div>
+        <div class="column-start">
+            <a href="#">
+                <div>
+                    <h3>Java</h3>
+                </div>
+                <p>Faça exercícios de Java para treinar e mostrar para as empresas a sua experiência</p>
+            </a>
+        </div>
+    </div>
+</section>
 
 {% endblock %}

@@ -2,21 +2,112 @@
 
 {% block conteudo %}
 
-    <section>
-        <h2>Python</h2>
-        <div>
-            <p>
-                    
-                    Imprimir
-                    O que é essa tal linguagem Python, afinal?
-                    Olá a Todos! Aqui estarei dando inicio a um Guia sobre Python e para quem está querendo aprender esta linguagem, este artigo será uma boa opção.
-                    
-                    Partirei do princípio que você, leitor, não tem nenhum conhecimento sobre a linguagem, portanto começarei do zero, explicando desde os conceitos da linguagem, passando pelo clássico "hello word" e desbravando as funcionalidades e recursos da linguagem.
-                    
-                    
-                    O que é Phyton?
-                    Python é uma linguagem dinâmica, interpretada, robusta, multiplataforma, multi-paradigma (orientação à objetos, funcional, refletiva e imperativa) e está preparada para rodar em JVM e .NET Framework. Lançada em 1991 por Guido van Rossum, é uma linguagem livre (até para projetos comerciais) e hoje pode-se programar para desktops, web e mobile.</p>
+<section class="container pag-conteudo">
+    <h2>Python</h2>
+    <div>
+        <h3>O que é Python</h3>
+        <p>Python é uma linguagem dinâmica, interpretada, robusta, multiplataforma, multi-paradigma (orientação à
+            objetos, funcional, refletiva e imperativa) e está preparada para rodar em JVM e .NET Framework. Lançada em
+            1991 por Guido van Rossum, é uma linguagem livre (até para projetos comerciais) e hoje pode-se programar
+            para desktops, web e mobile.</p>
+    </div>
+    <div>
+        <h3>Mão na Massa</h3>
+        <p>Primeiramente, temos que instalar o Python para o sistema operacional, o mesmo pode ser baixado no link
+            abaixo:
+        </p>
+        <a href="https://www.python.org/downloads/" target='_blank'>https://www.python.org/downloads/</a>
+        <p>A instalação é bem simples, protocolo NNF(Next-Next-Finish). Após instalarmos o Python, vamos instalar a IDE.
+            Você pode trabalhar com sua IDE favorita para nossos exemplos. Nos exemplos usarei o Netbeans com plugin
+            para Python.</p>
+        <p>Estarei levando em consideração que você também esteja usando o Netbeans. Após termos configurado o ambiente
+            de trabalho iniciaremos o nosso projeto, para isso vá no menu Arquivo > Novo Projeto, selecione a opção
+            Python, Python Project, clique em Próximo. Defina o nome do projeto e clique em Finalizar. Como é de praxe,
+            após criar o projeto veremos um arquivo .py com o nome do projeto e já com o clássico "Hello World", ao
+            executá será exibido no prompt abaixo a palavra "Hello World".</p>
+        
+        <div class="center">
+            <img src="../static/imgs/Exemplo1.png" alt="Exemplo 1">
+            
+            <div class="code my-1">
+                <code class="py-gray"># To change this template, choose Tools | Templates</code>
+                <code class="py-gray"># and open the template in the editor.</code>
+    
+                <div class="my-1">
+                    <div>
+                        <code class="py-white">__author__</code>
+                        <code class="py-gray">=</code>
+                        <code class="py-green">"bruno"</code>
+                    </div>
+                    <div>
+                        <code class="py-white">__date__ </code>
+                        <code class="py-gray">=</code>
+                        <code class="py-green">"$31/05/2010 06:59:46$"</code>
+                    </div>
+                    <div>
+                        <code class="py-purple"> if </code>
+                        <code class="py-white">__name__</code>
+                        <code class="py-gray"> == </code>
+                        <code class="py-green">"__main__":</code>
+    
+                    </div>
+                </div>
+    
+                <code class="py-purple"> print <span class="py-green">"Hello World"</span></code>
+            </div>
         </div>
-    </section>
+        
+        <p>As linhas 1 e 2 são cometários. A linha 4 e 5 são utilizadas para a documentação do projeto, onde são
+            definidos o autor e a data do projeto respectivamente. Mais abaixo, na linha 8, tem uma condição onde
+            verifica se a palavra reservada __name__ é igual à __main__. Isto quer dizer que o código abaixo somente
+            será executado se este for o arquivo principal, ou seja, o arquivo que foi invocado pelo interpretador,
+            seria como o método main() em Java. A linha 9 irá exibir na tela a mensagem "Hello World".</p>
+        <p>Vamos agora fazer uma modificação neste código. A linha 9 será alterado para o seguinte valor e em seguida
+            iremos executar o programa:</p>
+        
+        <div class="center">
+            <div class="code my-1">
+                <code class="py-purple">print <span class="py-green">"Este exemplo é muito fácil!"</span></code>
+            </div>
+    
+            <img src="../static/imgs/Exemplo2.png" alt="Exemplo 2">
+        </div>
+
+        <p>Como se pode verificar na figura anterior, ocorreu um erro na execução do programa, isto aconteceu porque a
+            linha 9 possui caracteres acentuados. Isso não quer dizer que não é possível trabalhar com palavras
+            acentuadas no Python, para resolver este problema é só inserir a seguinte linha na primeira linha do seu
+            arquivo .py:</p>
+        
+        <div class="center">
+            <div class="code my-1">
+                <code class="py-gray"> # -*- coding: iso-8859-15 -*-</code>
+            </div>
+            <img src="../static/imgs/Exemplo3.png" alt="Exemplo 3">
+        </div>
+    
+    </div>
+
+    <p>Essa foi uma introdução da linguagem, porém, para você ficar craque na linguagem e conseguir a vaga dos sonhos,
+        estudar é essêncial. A partir daqui, disponibilizaremos uma série de conteúdos como um pontapé inicial pra você,
+        mas lembre, isso depende também do seu esforço, da sua pesquisa, do seu treinamento. Veja logo abaixo uns links
+        que recomendamos:</p>
+
+    <div>
+        <h3>Conteúdos recomendados:</h3>
+
+        <ul>
+            <li>
+                <p>A fonte bibliografica dessa pagina foi o Devmedia. Se quiser ler nesse site, clique no link abaixo:</p>
+                <a href="https://www.devmedia.com.br/aprendendo-a-programar-em-python-introducao/17093" target="_blank">https://www.devmedia.com.br/aprendendo-a-programar-em-python-introducao/17093</a>
+            </li>
+            <li>
+                <a href="https://python.org.br/introducao/">https://python.org.br/introducao/</a>
+            </li>
+            <li>
+                <a href=""></a>
+            </li>
+        </ul>
+    </div>
+</section>
 
 {% endblock %}

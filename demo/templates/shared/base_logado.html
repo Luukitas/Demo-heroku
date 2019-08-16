@@ -13,17 +13,19 @@
 </head>
 
 <body>
-    <nav>
-        <h1 class="logo">Emprega<span class="green">+</span></h1>
+    <nav class="purple">
+        <h1 class="logo">Emprega<span class="logo-green">+</span></h1>
+        <a href="/">sair</a>
     </nav>
 
-    <aside>
+    <header>
         <img src="{{ pessoa.img_perfil.url }}">
-        <h2>{{ pessoa.nome }}</h2>
-        <p>{{ pessoa.profissao }}</p>
-        <p>{{ pessoa.dt_nasc }}</p>
-        <a href="/">sair</a>
-    </aside>
+        <div>
+            <h2>{{ pessoa.nome }}</h2>
+            <p>{{ pessoa.profissao }}</p>
+            <p style="font-size: 10px; color: gray">Usuario(a) do Emprega+</p>
+        </div>
+    </header>
 
     <main>
         <nav class="sticky">
@@ -36,6 +38,21 @@
 
         {% endblock %}
     </main>
+
+    <footer>
+        <div>
+            <h2>Emprega<span class="logo-green">+</span></h2>
+        </div>
+        <div>
+            <ul>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+            </ul>
+        </div>
+    </footer>
 
 </body>
 

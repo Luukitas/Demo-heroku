@@ -66,4 +66,6 @@ def pagina_empr(request, id, name):
     if empresa is not None:
         return render(request, 'empresa.html', {'pessoa': pessoa, 'empresa': empresa})    
     return render(request, 'empresa.html', contexto)
+
+
     

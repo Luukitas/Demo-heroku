@@ -1,3 +1,8 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
 section{
     align-items: center;
     display: flex;
