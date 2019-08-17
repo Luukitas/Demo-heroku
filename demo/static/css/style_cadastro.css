@@ -1,0 +1,9 @@
+body {
+    background: purple;
+    margin: 0;
+}
+
+input {
+    border: #39F75C solid 1px;
+    border-radius: 5px;
+}
