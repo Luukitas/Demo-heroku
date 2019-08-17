@@ -1,15 +1,12 @@
-body{
+body {
     display: grid;
     font-family: 'Montserrat', sans-serif;
-    grid-template-areas: 'nav nav nav nav'
-                        'header header header header'
-                        'main main main main'
-                        'footer footer footer footer';
+    grid-template-areas: 'nav nav nav nav' 'header header header header' 'main main main main' 'footer footer footer footer';
     /* grid-template-columns: 25% auto auto auto;  */
     margin: 0;
 }
 
-nav{
+nav {
     align-items: center;
     display: flex;
     grid-area: nav;
@@ -18,16 +15,16 @@ nav{
     z-index: 1;
 }
 
-nav a{
+nav a {
     color: #fff;
     text-decoration: none;
 }
 
-nav a:hover{
+nav a:hover {
     color: rgb(228, 227, 227);
 }
 
-header{
+header {
     align-items: center;
     display: flex;
     grid-area: header;
@@ -35,7 +32,7 @@ header{
     padding: 10px 0;
 }
 
-header div{
+header div {
     align-items: flex-start;
     display: flex;
     flex-direction: column;
@@ -43,19 +40,19 @@ header div{
     width: 60%;
 }
 
-header div>*{
+header div>* {
     margin: 0;
     padding: 0;
 }
 
-header img{
+header img {
     border: 5px solid rgb(169, 41, 255);
     border-radius: 50%;
     height: 150px;
     width: 150px;
 }
 
-main{
+main {
     align-items: center;
     display: flex;
     grid-area: main;
@@ -63,7 +60,7 @@ main{
     flex-direction: column;
 }
 
-.container{
+.container {
     align-items: center;
     width: 80%;
     display: flex;
@@ -71,7 +68,7 @@ main{
     justify-content: center;
 }
 
-.conteudo{
+.conteudo {
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -79,7 +76,7 @@ main{
     width: 100%;
 }
 
-.conteudo ul{
+.conteudo ul {
     align-items: center;
     display: flex;
     justify-content: space-evenly;
@@ -89,7 +86,7 @@ main{
     width: 100%;
 }
 
-.conteudo li{
+.conteudo li {
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -98,7 +95,7 @@ main{
     width: 25%;
 }
 
-.img{
+.img {
     align-items: center;
     display: flex;
     font-size: 30px;
@@ -106,48 +103,48 @@ main{
     margin-bottom: 10px;
 }
 
-.img p{
+.img p {
     padding: 0;
     margin: 0;
 }
 
-.img img{
+.img img {
     height: 30px;
     width: 30px;
 }
 
-.pag-conteudo{
+.pag-conteudo {
     align-items: center;
     text-align: justify;
 }
 
-.pag-conteudo img{
+.pag-conteudo img {
     width: 600px;
 }
 
-.pag-conteudo p{
+.pag-conteudo p {
     margin: 20px 0;
 }
 
-.logo{
+.logo {
     font-family: 'Assistant', sans-serif;
     font-size: 15px;
     margin-top: 0px;
 }
 
-.logo-green{
+.logo-green {
     color: rgb(6, 247, 6);
     font-family: 'Liu Jian Mao Cao', cursive;
     font-size: 30px;
     margin: 0 0 0 -2px;
 }
 
-.purple{
+.purple {
     background-color: rgb(57, 0, 131);
     color: #fff;
 }
 
-.sticky{
+.sticky {
     align-items: center;
     background-color: #FFF;
     border-bottom: 1px solid gray;
@@ -160,52 +157,57 @@ main{
     width: 100%;
 }
 
-.sticky, .sticky a{
+.sticky,
+.sticky a {
     color: #000;
 }
 
-.sticky a:hover{
+.sticky a:hover {
     color: gray;
 }
 
-.sticky ul{
+.sticky ul {
     display: flex;
     justify-content: space-evenly;
     list-style: none;
     width: 100%;
 }
 
-.li-c1{
+.li-c1 {
     background-color: rgb(61, 1, 100);
     border-right: 10px solid rgb(247, 163, 6);
     color: white;
     transition: 1s;
 }
 
-.li-c2{
+.li-c2 {
     background-color: rgb(0, 23, 156);
     border-right: 10px solid rgb(247, 99, 0);
     color: white;
     transition: 1s;
 }
 
-.li-c3{
+.li-c3 {
     background-color: rgb(250, 92, 0);
     border-right: 10px solid rgb(0, 132, 172);
     color: white;
     transition: 1s;
 }
 
-.li-c1 a, .li-c2 a, .li-c3 a{
+.li-c1 a,
+.li-c2 a,
+.li-c3 a {
     color: #fff;
     text-decoration: none
 }
 
-.li-c1:hover, .li-c2:hover, .li-c3:hover{
+.li-c1:hover,
+.li-c2:hover,
+.li-c3:hover {
     transform: scale(1.2);
 }
 
-.exercicios{
+.exercicios {
     border: 1px solid gray;
     border-radius: 20px;
     box-shadow: -1.7px 1.7px 1px rgb(150, 148, 148);
@@ -214,22 +216,22 @@ main{
     width: 80%;
 }
 
-.exercicios div{
+.exercicios div {
     align-items: center;
     display: flex;
 }
 
-.exercicios img{
+.exercicios img {
     height: 50px;
     width: 50px;
 }
 
-.exercicio-w-img{
+.exercicio-w-img {
     justify-content: center;
     width: 15%
 }
 
-.column-start{
+.column-start {
     align-items: flex-start;
     display: flex;
     flex-direction: column;
@@ -237,20 +239,21 @@ main{
     margin: 30px 0;
 }
 
-.column-start h3, p{
+.column-start h3,
+p {
     margin: 1px 0;
 }
 
-.column-start a{
+.column-start a {
     color: rgb(88, 88, 88);
     text-decoration: none;
 }
 
-.column-start a:hover{
+.column-start a:hover {
     color: #000;
 }
 
-.code{
+.code {
     align-items: flex-start;
     background-color: rgb(39, 39, 39);
     border-radius: 15px 0 15px 0;
@@ -260,33 +263,57 @@ main{
     width: 70%;
 }
 
-.code div{ 
+.code div {
     flex-direction: initial;
 }
 
-.py-gray{
-    color: rgb(168, 168, 168) !important; 
+.py-gray {
+    color: rgb(168, 168, 168) !important;
 }
 
-.py-white{
+.py-white {
     color: #fff !important;
 }
 
-.py-green{
+.py-green {
     color: rgb(191, 230, 18) !important;
 }
 
-.py-purple{
+.py-purple {
     color: rgb(169, 41, 255) !important;
 }
 
-.my-1{
+.my-1 {
     margin: 20px 0;
 }
 
-.center{
-    align-items: center; 
-    display: flex; 
+.center {
+    align-items: center;
+    display: flex;
     flex-direction: column;
-    justify-content: center; 
+    justify-content: center;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    grid-area: footer;
+    background-color: rgb(169, 41, 255);
+}
+
+footer div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer ul {
+    align-items: center;
+    display: flex;
+    list-style: none;
+}
+
+footer a {
+    margin: 0 10px;
 }
