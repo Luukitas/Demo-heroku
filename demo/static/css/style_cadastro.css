@@ -21,3 +21,17 @@ input {
     padding: 20px;
     width: 70%;
 }
+
+.gray {
+    background-color: black;
+}
+
+.gray * {
+    color: white;
+    background-color: gray;
+}
+
+.gray div,
+.gray form {
+    background-color: gray;
+}

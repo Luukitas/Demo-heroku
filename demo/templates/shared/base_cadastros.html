@@ -8,12 +8,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Assistant|Liu+Jian+Mao+Cao|Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/style_cadastro.css' %}">
+    <script defer src="{% static 'js/script.js' %}"></script>
     <title>Document</title>
 </head>
 
 <body>
     <div class="base-cadastro">
-        {% block conteudo %} {% endblock %}
+        <a onclick="mudaCor()" href="#">Acessibilidade</a> {% block conteudo %} {% endblock %}
     </div>
 
 
