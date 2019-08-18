@@ -67,5 +67,5 @@ def pagina_empr(request, id, name):
         return render(request, 'empresa.html', {'pessoa': pessoa, 'empresa': empresa})    
     return render(request, 'empresa.html', contexto)
 
-
-    
+def configuracoes(request, id):
+    pessoa=Pessoa.objects.filter(id=id).first()

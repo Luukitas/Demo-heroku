@@ -19,7 +19,13 @@
     </nav>
 
     <header>
-        <img src="{{ pessoa.img_perfil.url }}">
+
+        <div>
+            <img src="{{ pessoa.img_perfil.url }}">
+            <a href="">Configurações</a>
+        </div>
+
+        
         <div>
             <h2>{{ pessoa.nome }}</h2>
             <p>{{ pessoa.profissao }}</p>
@@ -45,11 +51,11 @@
         </div>
         <div>
             <ul>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Empresas</a></li>
+                <li><a href="#">Seu perfil</a></li>
+                <li><a href="#">Cursos</a></li>
+                <li><a href="#">Vagas</a></li>
             </ul>
         </div>
     </footer>
