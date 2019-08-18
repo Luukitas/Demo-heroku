@@ -11,6 +11,10 @@ input {
     border-radius: 5px;
 }
 
+a {
+    text-decoration: none;
+}
+
 .base-cadastro {
     align-items: center;
     background-color: white;
@@ -20,6 +24,8 @@ input {
     justify-content: center;
     padding: 20px;
     width: 70%;
+    border-radius: 15px;
+    color: purple;
 }
 
 .gray {
