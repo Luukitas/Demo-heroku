@@ -9,6 +9,23 @@ body{
     margin: 0;
 }
 
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track{
+    background: rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb{
+    background: rgb(169, 41, 255);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: rgb(138, 33, 207);
+}
+
 nav{
     align-items: center;
     display: flex;
@@ -289,4 +306,46 @@ main{
     display: flex; 
     flex-direction: column;
     justify-content: center; 
+}
+
+.lista-empresa{
+    width: 80%;
+}
+
+.lista-empresa ul{
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+}
+
+.lista-empresa a{
+    color: gray;
+    text-decoration: none;
+}
+
+.lista-form{
+    display: flex;
+}
+
+.lista-form input[type='text']{
+    border: none;
+    border-bottom: 1px solid gray;
+    outline: none;
+    width: 100%;
+}
+
+.lista-form input[type='text']:focus{
+    border-bottom: 3px solid black;
+    transition-delay: 0.3s;
+    transition: 0.1s ease-in;
+}
+
+.lista-form input[type='submit']{
+    border: none;
+}
+
+.atuacao{
+    font-size: 8px;
 }

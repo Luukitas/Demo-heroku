@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from demo.models import Pessoa, Empresa, Exp_pessoa
 from demo import views
+from .forms import *
 
 def conteudo(request, id):
     pessoa = Pessoa.objects.filter(id=id).first()
@@ -67,5 +68,8 @@ def pagina_empr(request, id, name):
         return render(request, 'empresa.html', {'pessoa': pessoa, 'empresa': empresa})    
     return render(request, 'empresa.html', contexto)
 
-
+def configuracao(request, id):
+    pessoa = Pessoa.objects.filter(id=id).filter()
+    form = UsuarioForm(request.POST, request.GET)
+    
     

@@ -25,15 +25,17 @@ def login(request):
         email_form = request.POST.get('email')
         senha_form = request.POST.get('senha')
         usuario = Pessoa.objects.filter(email=email_form).first()
-        senha = usuario.senha
-        print(senha_form)
         
     
         if usuario is None:
-            print('deu ruim')
+            print('deu ruim usuario')
             contexto = {'msg': 'Usuario ou senha incorretos. Por favor, insira um correto ou cadastre-se'}
             return render(request, 'login.html', contexto)
-        elif senha_form != senha:
+        elif usuario.senha is None:
+            print('deu ruim senha')
+            contexto = {'msg': 'Usuario ou senha incorretos. Por favor, insira um correto ou cadastre-se'}
+            return render(request, 'login.html', contexto)
+        elif senha_form != usuario.senha:
             print('deu errado')
             contexto = {'msg': 'Usuario ou senha incorretos. Por favor, insira um correto ou cadastre-se'}
             return render(request, 'login.html', contexto)

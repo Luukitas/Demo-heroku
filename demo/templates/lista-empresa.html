@@ -2,18 +2,21 @@
 
 {% block conteudo %}
 
-<section>
+<section class="lista-empresa">
     <h2>Lista de Empresas</h2>
-    <form action="/list-empresa/{{ pessoa.id }}" method="post">
-        {% csrf_token %}
-        <input type="text" name='empresa'>
-        <input type="submit" value="Enviar">
-    </form>
+    <div>
+        <form action="/list-empresa/{{ pessoa.id }}" class="lista-form" method="post">
+            {% csrf_token %}
+            <input type="text" name='empresa'>
+            <input type="submit" src="../static/imgs/icons8-pesquisar-26.png">
+        </form>    
+    </div>
     <p>{{ msg }}</p>
     <ul>
         {% for empresa in empresas %}
         <li><a href="/empresa/{{ pessoa.id }}/{{empresa.nome}}">
                 <p>{{ empresa }}</p>
+                <p>{{ empresa.atuacao }}</p>
             </a></li>
         {% endfor %}
     </ul>

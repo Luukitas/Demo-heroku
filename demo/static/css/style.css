@@ -12,6 +12,23 @@ body{
     overflow-x: hidden;
 }
 
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track{
+    background: rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb{
+    background: rgb(169, 41, 255);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: rgb(138, 33, 207);
+}
+
 nav{
     width: 100vw;
     position: fixed;
