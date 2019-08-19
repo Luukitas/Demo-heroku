@@ -16,7 +16,7 @@
         {% for empresa in empresas %}
         <li><a href="/empresa/{{ pessoa.id }}/{{empresa.nome}}">
                 <p>{{ empresa }}</p>
-                <p>{{ empresa.atuacao }}</p>
+                <p class="menor">Empresa de {{ empresa.atuacao }}</p>
             </a></li>
         {% endfor %}
     </ul>

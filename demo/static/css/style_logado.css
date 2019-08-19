@@ -1,7 +1,10 @@
 body {
     display: grid;
     font-family: 'Montserrat', sans-serif;
-    grid-template-areas: 'nav nav nav nav' 'header header header header' 'main main main main' 'footer footer footer footer';
+    grid-template-areas: 'nav nav nav nav' 
+                        'header header header header' 
+                        'main main main main' 
+                        'footer footer footer footer';
     /* grid-template-columns: 25% auto auto auto;  */
     margin: 0;
 }
@@ -77,6 +80,12 @@ main {
     flex-direction: column;
 }
 
+.menor{
+    color: gray;
+    font-size: 10px;
+    text-decoration: none;
+}
+
 .container {
     align-items: center;
     width: 80%;
@@ -110,6 +119,11 @@ main {
     height: 100px;
     justify-content: center;
     width: 25%;
+}
+
+#img_perfil{
+    height: 200px;
+    width: 200px;
 }
 
 .img {
@@ -187,6 +201,7 @@ main {
     display: flex;
     justify-content: space-evenly;
     list-style: none;
+    padding: 0;
     width: 100%;
 }
 
@@ -309,6 +324,7 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: center; 
+    width: 100%;
 }
 
 .lista-empresa{
@@ -355,17 +371,18 @@ p {
 }
 
 footer {
-    display: flex;
     align-items: center;
+    background-color: rgb(169, 41, 255);
+    display: flex;
     justify-content: space-evenly;
     grid-area: footer;
-    background-color: rgb(169, 41, 255);
+    position: inherit;
 }
 
 footer div {
+    align-items: center;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 footer ul {
@@ -377,3 +394,71 @@ footer ul {
 footer a {
     margin: 0 10px;
 }
+
+@media only screen and (max-width: 992px) { 
+
+    .conteudo ul{
+        flex-direction: column;
+    }
+
+    .conteudo li{
+        margin: 10px 0;
+        width: 98%;
+    }
+
+    .li-c1:hover,
+    .li-c2:hover,
+    .li-c3:hover {
+        transform: scale(1);
+    }
+
+    .li-c1:active,
+    .li-c2:active,
+    .li-c3:active {
+        transform: scale(0.9);
+    }
+
+}
+
+@media only screen and (max-width: 768px) { 
+
+    header{
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    header div{
+        align-items: center;
+        margin: 15px 0;
+    }
+
+    footer, footer ul{
+        flex-direction: column;
+        padding: 0;
+    }
+
+    footer a{
+        margin: 5px 0;
+    }
+
+    .exercicios div:not(.exercicio-w-img){
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .column-start{
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .pag-conteudo{
+        width: 98%;
+    }
+
+    .pag-conteudo img{
+        width: 98%;
+    }
+
+ }

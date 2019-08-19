@@ -20,16 +20,16 @@
 
     <header>
 
-        <div>
-            <img src="{{ pessoa.img_perfil.url }}">
-            <a href="">Configurações</a>
+        <div class="img">
+            <img id="img_perfil" src="{{ pessoa.img_perfil.url }}">
+            <a class="menor" href="">Configurações</a>
         </div>
 
         
         <div>
             <h2>{{ pessoa.nome }}</h2>
             <p>{{ pessoa.profissao }}</p>
-            <p style="font-size: 10px; color: gray">Usuario(a) do Emprega+</p>
+            <p class="menor">Usuario(a) do Emprega+</p>
         </div>
     </header>
 

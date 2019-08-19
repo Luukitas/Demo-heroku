@@ -12,7 +12,6 @@ body {
     overflow-x: hidden;
 }
 
-<<<<<<< HEAD
 ::-webkit-scrollbar{
     width: 10px;
 }
@@ -30,10 +29,7 @@ body {
     background: rgb(138, 33, 207);
 }
 
-nav{
-=======
 nav {
->>>>>>> c7e4562b20213800e085e937f97760557025d9aa
     width: 100vw;
     position: fixed;
     z-index: 3;

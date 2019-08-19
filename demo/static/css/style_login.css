@@ -3,7 +3,6 @@ body {
     margin: 0;
 }
 
-<<<<<<< HEAD
 ::-webkit-scrollbar{
     width: 10px;
 }
@@ -21,10 +20,7 @@ body {
     background: rgb(84, 8, 155);
 }
 
-section{
-=======
 section {
->>>>>>> c7e4562b20213800e085e937f97760557025d9aa
     align-items: center;
     display: flex;
     height: 100vh;
