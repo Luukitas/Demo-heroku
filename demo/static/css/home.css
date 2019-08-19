@@ -5,8 +5,16 @@ body {
 
 nav {
     align-items: center;
-    background-color: blueviolet;
     color: white;
+    display: flex;
+    height: 90px;
+    justify-content: space-evenly;
+    width: 100vw;
+}
+
+.container_nav {
+    align-items: center;
+    background: blueviolet;
     display: flex;
     height: 100px;
     justify-content: space-evenly;
@@ -150,34 +158,34 @@ aside {
 .estevan_biografia {
     color: crimson;
     height: 50px;
-    font-size: 15px;
+    font-size: 25px;
     width: 10vw;
 }
 
 .giovanni_biografia {
     color: crimson;
     height: 50px;
-    font-size: 15px;
+    font-size: 25px;
     width: 10vw;
 }
 
 .lucas_biografia {
     color: crimson;
     height: 50px;
-    font-size: 15px;
+    font-size: 25px;
     width: 10vw;
 }
 
 .matheus_biografia {
     color: crimson;
     height: 50px;
-    font-size: 15px;
+    font-size: 25px;
     width: 10vw;
 }
 
 .tamirys_biografia {
     color: crimson;
-    font-size: 15px;
+    font-size: 25px;
     height: 50px;
     width: 10vw;
 }
