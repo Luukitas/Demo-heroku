@@ -64,3 +64,6 @@ def cadastra_empresa(request):
         form = EmpresaForm()
 
     return render(request, 'cad-empresa.html', {'form': form})
+
+def sobre_nos(request):
+    return render(request, 'home.html', {})
