@@ -181,3 +181,41 @@ aside {
     height: 50px;
     width: 10vw;
 }
+
+footer {
+    align-items: center;
+    background-color: purple;
+    color: white;
+    display: flex;
+    font-size: 23px;
+    height: 300px;
+    justify-content: space-evenly;
+    padding: 30px;
+    width: 100vw;
+}
+
+.texto_footer_titulo {
+    align-items: center;
+    background-color: purple;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-size: 23px;
+    height: 100px;
+    justify-content: space-evenly;
+    padding: 30px;
+    width: 50vw;
+}
+
+.texto_footer {
+    align-items: center;
+    background-color: purple;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-size: 23px;
+    height: 200px;
+    justify-content: space-evenly;
+    padding: 30px;
+    width: 100vw;
+}
