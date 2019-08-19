@@ -71,5 +71,8 @@ def pagina_empr(request, id, name):
 def configuracao(request, id):
     pessoa = Pessoa.objects.filter(id=id).filter()
     form = UsuarioForm(request.POST, request.GET)
+
+    # if form.is_valid:
+
     
     
