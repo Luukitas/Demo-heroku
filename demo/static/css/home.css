@@ -50,7 +50,7 @@ section {
     color: coral;
     display: flex;
     flex-direction: column;
-    font-size: 20px;
+    font-size: 23px;
     height: 400px;
     justify-content: space-evenly;
     padding: 30px;
@@ -58,6 +58,27 @@ section {
 }
 
 p {
-    width: 90vw;
+    width: 70vw;
     height: 100px;
+}
+
+main {
+    align-items: center;
+    background-color: coral;
+    color: #0A0BCC;
+    display: flex;
+    flex-direction: column;
+    font-size: 23px;
+    height: 700px;
+    justify-content: space-evenly;
+    padding: 30px;
+    width: 100vw;
+}
+
+.campanhas {
+    align-items: center;
+    display: flex;
+    height: 70px;
+    justify-content: center;
+    flex-direction: column;
 }
