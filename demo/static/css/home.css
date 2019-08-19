@@ -8,6 +8,15 @@ nav {
     background-color: blueviolet;
     color: white;
     display: flex;
+    height: 90px;
+    justify-content: space-evenly;
+    width: 100vw;
+}
+
+.container_nav {
+    align-items: center;
+    background: blueviolet;
+    display: flex;
     height: 100px;
     justify-content: space-evenly;
     width: 100vw;
@@ -32,7 +41,7 @@ nav {
     font-size: 17px;
     height: 50px;
     justify-content: space-evenly;
-    width: 250px;
+    width: 400px;
 }
 
 a {
@@ -42,4 +51,180 @@ a {
 
 b {
     color: #5BFF2E;
+}
+
+section {
+    align-items: center;
+    background-color: white;
+    color: coral;
+    display: flex;
+    flex-direction: column;
+    font-size: 23px;
+    height: 400px;
+    justify-content: space-evenly;
+    padding: 30px;
+    width: 100vw;
+}
+
+p {
+    width: 70vw;
+    height: 100px;
+}
+
+main {
+    align-items: center;
+    background-color: coral;
+    color: #0A0BCC;
+    display: flex;
+    flex-direction: column;
+    font-size: 23px;
+    height: 700px;
+    justify-content: space-evenly;
+    padding: 30px;
+    width: 100vw;
+}
+
+.campanhas {
+    align-items: center;
+    display: flex;
+    height: 70px;
+    justify-content: center;
+    flex-direction: column;
+}
+
+aside {
+    align-items: center;
+    background-color: white;
+    color: #0A0BCC;
+    display: flex;
+    flex-direction: column;
+    font-size: 23px;
+    height: 900px;
+    justify-content: space-evenly;
+    padding: 30px;
+    width: 100vw;
+}
+
+.container_imagem_idealizadores {
+    align-items: center;
+    display: flex;
+    height: 300px;
+    justify-content: space-evenly;
+    width: 100vw;
+}
+
+.estevan {
+    background-color: blue;
+    color: white;
+    height: 50px;
+    width: 18vw;
+}
+
+.giovanni {
+    background-color: blue;
+    color: white;
+    height: 50px;
+    width: 18vw;
+}
+
+.lucas {
+    background-color: blue;
+    color: white;
+    height: 50px;
+    width: 18vw;
+}
+
+.matheus {
+    background-color: blue;
+    color: white;
+    height: 50px;
+    width: 18vw;
+}
+
+.tamirys {
+    background-color: blue;
+    color: white;
+    height: 50px;
+    width: 18vw;
+}
+
+.container_biografia_idealizadores {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100vw;
+    height: 350px;
+}
+
+.estevan_biografia {
+    color: crimson;
+    height: 50px;
+    font-size: 25px;
+    width: 10vw;
+}
+
+.giovanni_biografia {
+    color: crimson;
+    height: 50px;
+    font-size: 25px;
+    width: 10vw;
+}
+
+.lucas_biografia {
+    color: crimson;
+    height: 50px;
+    font-size: 25px;
+    width: 10vw;
+}
+
+.matheus_biografia {
+    color: crimson;
+    height: 50px;
+    font-size: 25px;
+    width: 10vw;
+}
+
+.tamirys_biografia {
+    color: crimson;
+    font-size: 25px;
+    height: 50px;
+    width: 10vw;
+}
+
+footer {
+    align-items: center;
+    background-color: purple;
+    color: white;
+    display: flex;
+    font-size: 23px;
+    height: 300px;
+    justify-content: space-evenly;
+    padding: 30px;
+    width: 100vw;
+}
+
+.texto_footer_titulo {
+    align-items: center;
+    background-color: purple;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-size: 23px;
+    height: 100px;
+    justify-content: space-evenly;
+    padding: 30px;
+    width: 50vw;
+}
+
+.texto_footer {
+    align-items: center;
+    background-color: purple;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-size: 23px;
+    height: 200px;
+    justify-content: space-evenly;
+    padding: 30px;
+    width: 100vw;
 }

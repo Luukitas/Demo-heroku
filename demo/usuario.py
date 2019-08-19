@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from demo.models import Pessoa, Empresa, Exp_pessoa
 from demo import views
 from .forms import *
@@ -69,10 +69,20 @@ def pagina_empr(request, id, name):
     return render(request, 'empresa.html', contexto)
 
 def configuracao(request, id):
-    pessoa = Pessoa.objects.filter(id=id).filter()
-    form = UsuarioForm(request.POST, request.GET)
+    pessoa = Pessoa.objects.filter(id=id)
+    usuario = get_object_or_404(Pessoa, pk=id)
+    if request.method == 'POST':
+        form = UsuarioForm(request.POST, request.FILES, instance=usuario)
 
-    # if form.is_valid:
+        if form.is_valid:
+            print('foi')
+            form.save()
+            return redirect('/')
 
+    else:
+        print('AQ')
+        form = UsuarioForm()
+    
+    return render(request, 'configuracoes.html', {'pessoa': pessoa, 'form': form})
     
     

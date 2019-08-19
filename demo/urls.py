@@ -14,7 +14,8 @@ urlpatterns = [
     path('list-empresa/<int:id>', procura_empresa),
     path('empresa/<int:id>/<str:name>', pagina_empr),
     path('conteudo/<int:id>', conteudo),
-    path('home',sobre_nos)
+    path('home',sobre_nos),
+    path('configuracoes/<int:id>', configuracao)
 ]
 
 if settings.DEBUG:

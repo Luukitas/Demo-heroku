@@ -6,6 +6,18 @@ body{
     padding: 20px 0;
 }
 
+input {
+    border-radius: 5px;
+}
+
+a {
+    align-items: center;
+    display: flex;
+    justify-content: left;
+    text-decoration: none;
+    width: 70vw;
+}
+
 ::-webkit-scrollbar{
     width: 10px;
 }
@@ -31,8 +43,8 @@ body{
     box-shadow: 0px 2px 2px rgba(123, 14, 224);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 20px 0;
+    justify-content: right;
+    padding: 20px;
     width: 70%;
 }
 
@@ -70,4 +82,17 @@ body{
     padding: 5px;
     position: fixed;
     top: 30%;
+}
+
+.gray div,
+.gray form {
+    background-color: gray;
+}
+
+input {
+    background-color: lightcyan;
+}
+
+textarea {
+    background-color: lightcyan;
 }
