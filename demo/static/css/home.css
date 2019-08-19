@@ -5,6 +5,7 @@ body {
 
 nav {
     align-items: center;
+    background-color: blueviolet;
     color: white;
     display: flex;
     height: 90px;
@@ -40,7 +41,7 @@ nav {
     font-size: 17px;
     height: 50px;
     justify-content: space-evenly;
-    width: 250px;
+    width: 400px;
 }
 
 a {
