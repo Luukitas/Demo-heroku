@@ -6,8 +6,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Assistant|Liu+Jian+Mao+Cao|Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Assistant|Liu+Jian+Mao+Cao|Montserrat&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/style_login.css' %}">
+    <script defer src="{% static 'js/script.js' %}"></script>
     <title>Emprega+</title>
 </head>
 
@@ -18,27 +20,56 @@
                 Começe agora mesmo, um novo recomeço em sua jornada profissional!
             </h2>
         </div>
+
         <div class="log">
             <p class="alert">{{msg}}</p>
-            <h3>Faça o seu login</h3>
-            <form action="/login" method="POST">
-                {% csrf_token %}
-                <div>
-                    <label>Login:</label>
-                    <input type="email" name="email">
+            <div class="btn-log">
+                <a id="usuario" href="#" class="ativo" onclick="mudaLogin()">Usuario</a>
+                <a id="empresa" href="#" onclick="mudaLogin()">Empresa</a>
+            </div>
+            <div id="divUsuario" class="log w-100 h-auto">
+                <h3>Faça o seu login</h3>
+                <form action="/login" method="POST">
+                    {% csrf_token %}
+                    <div>
+                        <label>E-mail:</label>
+                        <input type="email" name="email">
+                    </div>
+                    <div>
+                        <label>Senha:</label>
+                        <input type="password" name="senha">
+                    </div>
+                    <div class="center">
+                        <input type="submit" value="Entrar">
+                    </div>
+                </form>
+                <div class="oferecim">
+                    <a href="/cadastrar">Cadastre-se</a>
+                    <p>Oferecimento por:</p>
+                    <img src="../static/imgs/EH.png" alt="Estação hack">
                 </div>
-                <div>
-                    <label>Senha:</label>
-                    <input type="password" name="senha">
+            </div>
+
+            <div id="divEmpresa" class="log w-100 h-auto none">
+                <h3>Login Empresarial</h3>
+                <form>
+                    <div>
+                        <label>E-mail:</label>
+                        <input type="email" name="email">
+                    </div>
+                    <div>
+                        <label>Senha:</label>
+                        <input type="password" name="senha">
+                    </div>
+                    <div class="center">
+                        <a class="btn center" href="/">Entrar</a>
+                    </div>
+                </form>
+                <div class="oferecim">
+                    <a href="/cad-empresa">Cadastre sua empresa</a>
+                    <p>Oferecimento por:</p>
+                    <img src="../static/imgs/EH.png" alt="Estação hack">
                 </div>
-                <div class="center">
-                    <input type="submit" value="Entrar">
-                </div>
-            </form>
-            <div class="oferecim">
-                <a href="/cadastrar">Cadastre-se</a>
-                <p>Oferecimento por:</p>
-                <img src="../static/imgs/EH.png" alt="Estação hack">
             </div>
         </div>
     </section>

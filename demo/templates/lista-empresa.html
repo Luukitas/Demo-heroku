@@ -8,7 +8,7 @@
         <form action="/list-empresa/{{ pessoa.id }}" class="lista-form" method="post">
             {% csrf_token %}
             <input type="text" name='empresa'>
-            <input type="submit" src="../static/imgs/icons8-pesquisar-26.png">
+            <button type="submit"><img src="../static/imgs/icons8-pesquisar-26.png"></button>
         </form>    
     </div>
     <p>{{ msg }}</p>

@@ -1,3 +1,5 @@
+/* A */
+
 body {
     display: grid;
     font-family: 'Montserrat', sans-serif;
@@ -9,6 +11,8 @@ body {
     margin: 0;
 }
 
+
+/* >>> Modificação de scollbar */
 ::-webkit-scrollbar{
     width: 10px;
 }
@@ -25,7 +29,10 @@ body {
 ::-webkit-scrollbar-thumb:hover{
     background: rgb(138, 33, 207);
 }
+/*Até aqui*/
 
+
+/* >>> Modificações do estilo da base_logado*/
 nav {
     align-items: center;
     display: flex;
@@ -76,15 +83,13 @@ main {
     align-items: center;
     display: flex;
     grid-area: main;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
+    min-height: 600px;
 }
 
-.menor{
-    color: gray;
-    font-size: 10px;
-    text-decoration: none;
-}
+/* até aqui */
+
 
 .container {
     align-items: center;
@@ -94,6 +99,8 @@ main {
     justify-content: center;
 }
 
+
+/* >>> Estilo da lista de conteudo na pagina inicial */
 .conteudo {
     align-items: center;
     display: flex;
@@ -120,7 +127,10 @@ main {
     justify-content: center;
     width: 25%;
 }
+/* Até aqui */
 
+
+/* >>> Estilização da imagem de perfil do usuario e criação de uma classe q ajusta as imagens (Usado no header do base_logado e na lista do conteudo) */
 #img_perfil{
     height: 200px;
     width: 200px;
@@ -143,7 +153,9 @@ main {
     height: 30px;
     width: 30px;
 }
+/* Até aqui */
 
+/* >>> Classe da pagina do conteúdo de estudo */
 .pag-conteudo {
     align-items: center;
     text-align: justify;
@@ -156,7 +168,9 @@ main {
 .pag-conteudo p {
     margin: 20px 0;
 }
+/* Até aqui */
 
+/* >>> Classe da logo */
 .logo {
     font-family: 'Assistant', sans-serif;
     font-size: 15px;
@@ -169,12 +183,16 @@ main {
     font-size: 30px;
     margin: 0 0 0 -2px;
 }
+/* Até aqui */
 
+/* >>> Classe de estilização do nav na parte logada do usuario (usado no base_logado)*/
 .purple {
     background-color: rgb(57, 0, 131);
     color: #fff;
 }
+/* Até aqui */
 
+/* >>> Classe de estilização de nav na parte logado, isso eh usado no nav do main (Veja no base_logado) */
 .sticky {
     align-items: center;
     background-color: #FFF;
@@ -204,7 +222,10 @@ main {
     padding: 0;
     width: 100%;
 }
+/* Até Aqui */
 
+
+/* Essas classes são responsáveis apenas pela estilização de cada componente da lista de conteudo */
 .li-c1 {
     background-color: rgb(61, 1, 100);
     border-right: 10px solid rgb(247, 163, 6);
@@ -238,7 +259,9 @@ main {
 .li-c3:hover {
     transform: scale(1.2);
 }
+/* Até aqui */
 
+/* >>> Classe da div dos exercicios */
 .exercicios {
     border: 1px solid gray;
     border-radius: 20px;
@@ -258,11 +281,13 @@ main {
     width: 50px;
 }
 
-.exercicio-w-img {
+.exercicio-w-img { /* >>> Essa classe ajusta o tamanho da div da imagem */ 
     justify-content: center;
     width: 15%
 }
+/* Até aqui */
 
+/* >>> Classe que ajusta os elementos p frente (Usado na div exercicios, na pagina usuario) */
 .column-start {
     align-items: flex-start;
     display: flex;
@@ -284,7 +309,10 @@ p {
 .column-start a:hover {
     color: #000;
 }
+/* Até aqui */
 
+
+/* >>> Essas classes ajustam a parte de codigos (Exemplos) da pagina conteudo*/
 .code {
     align-items: flex-start;
     background-color: rgb(39, 39, 39);
@@ -314,12 +342,13 @@ p {
 .py-purple {
     color: rgb(169, 41, 255) !important;
 }
+/* Até aqui */
 
-.my-1 {
+.my-1 {/* >>> Classe q ajusta a margin do elemento */
     margin: 20px 0;
 }
 
-.center {
+.center {/* >>> Classe que deixa o elemento no centro */
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -327,6 +356,7 @@ p {
     width: 100%;
 }
 
+/* >>> Classes usadas na pagina lista empresa */
 .lista-empresa{
     width: 80%;
 }
@@ -341,6 +371,7 @@ p {
 
 .lista-empresa a{
     color: gray;
+    font-size: 30px;
     text-decoration: none;
 }
 
@@ -351,6 +382,9 @@ p {
 .lista-form input[type='text']{
     border: none;
     border-bottom: 1px solid gray;
+    color: gray;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
     outline: none;
     width: 100%;
 }
@@ -361,15 +395,25 @@ p {
     transition: 0.1s ease-in;
 }
 
-.lista-form input[type='submit']{
+.lista-form button{
+    background: none;
     border: none;
+    border-bottom: 1px solid black;
 }
 
-.atuacao{
+.atuacao{/* >>> Classe que ajusta a area de atuação na empresa (Veja em list-empresa.html) */
     font-size: 8px;
     justify-content: center;
 }
 
+.menor{
+    color: gray;
+    font-size: 15px;
+    text-decoration: none;
+}
+/* Até aqui */
+
+/* >>> Estilização do footer na paginas logadas  */
 footer {
     align-items: center;
     background-color: rgb(169, 41, 255);
@@ -393,6 +437,13 @@ footer ul {
 
 footer a {
     margin: 0 10px;
+}
+/* Até aqui */
+
+@media only screen and (max-width: 1100px) and (orientation: portrait){
+    main{
+        min-height: 1100px !important;
+    }
 }
 
 @media only screen and (max-width: 992px) { 
@@ -421,6 +472,10 @@ footer a {
 }
 
 @media only screen and (max-width: 768px) { 
+
+    nav{
+        padding: 0 5px;
+    }
 
     header{
         align-items: center;

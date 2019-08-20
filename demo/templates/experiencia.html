@@ -7,12 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="/experiencia/{{ id }}" method="post">
+    <form action="" method="post">
         {% csrf_token %}
-        <div>
-            <label>Digite suas experiencias profissionais</label>
-            <textarea name="exp" cols="30" rows="10"></textarea>
-        </div>
+        {{ form.valores }}
         <input type="submit" value="Cadastrar">
     </form>
     <div>

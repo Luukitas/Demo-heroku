@@ -29,13 +29,6 @@ class Pessoa(models.Model):
         blank=True,
     )
 
-    experiencia = models.CharField(
-        max_length=255,
-        verbose_name='experiencia',
-        null=True,
-        blank=True,
-    )
-
     img_perfil = models.ImageField(
         upload_to='images_pessoa/',
         verbose_name='Imagem',

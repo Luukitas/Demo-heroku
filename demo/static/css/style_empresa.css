@@ -1,0 +1,112 @@
+body{
+    grid-template-areas: 'nav nav nav nav'
+                        'header header header header'
+                        'descricao descricao descricao descricao'
+                        'projeto projeto projeto projeto'
+                        'footer footer footer footer'; 
+}
+
+nav{
+    grid-area: nav;
+}
+
+header{
+    border-bottom: 1px solid gray;
+    grid-area: header;
+}
+
+footer{
+    grid-area: footer;
+}
+
+.descricao{
+    grid-area: descricao;
+    padding: 0 5%;;
+}
+
+.projeto{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-area: projeto;
+    margin: 10px 0;
+    width: 100%;
+}
+
+.proj-banner{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.banner{
+    height: 300px;
+    width: 25%;
+}
+
+.banner p{
+    color: gray;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.banner a{
+    color: purple;
+    margin: 20px 0 !important;
+    text-decoration: none;
+}
+
+.banner a:hover{
+    color: rgba(187, 4, 233, 0.966)
+}
+
+.bg-banner-1{
+    background-color: rgba(0,0,0,0.5);
+    background: linear-gradient(rgba(145, 53, 0, 0.6), rgba(145, 53, 0, 0.6)),  url('http://s2.glbimg.com/SSaKiJYckchYo7O_WgFW_3bm2Ss=/620x345/e.glbimg.com/og/ed/f/original/2015/10/15/o-senhor-estagiario.jpg');
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50%;
+}
+
+.bg-banner-2{
+    background-color: rgba(0,0,0,0.5);
+    background: linear-gradient(rgba(65, 105, 225, 0.459), rgba(65, 105, 225, 0.452)),  url('../imgs/mulheres.jpg');
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50%;
+}
+
+.bg-banner-3{
+    background-color: rgba(0,0,0,0.5);
+    background: linear-gradient(rgba(6, 179, 58, 0.466), rgba(6, 179, 58, 0.459)),  url('../imgs/pcd.jpeg');
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50%;
+}
+
+.border-brown{
+    border-top: 5px solid rgba(145, 53, 0, 0.966);
+}
+
+.border-blue{
+    border-top: 5px solid royalblue;
+}
+
+.border-green{
+    border-top: 5px solid rgba(6, 179, 58, 0.966);
+}
+
+.img{
+    align-items: flex-end;
+    padding: 0 20px 0 0;
+    width: 35%;
+}
+
+.empresa{
+    width: 65%;
+}

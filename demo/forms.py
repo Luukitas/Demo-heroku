@@ -7,7 +7,7 @@ class UsuarioForm(forms.ModelForm):
 
     class Meta:
         model = Pessoa
-        fields = ['nome', 'email', 'senha', 'profissao','experiencia', 'img_perfil']
+        fields = ['nome', 'email', 'senha', 'profissao', 'img_perfil']
 
 class EmpresaForm(forms.ModelForm):
     senha = forms.CharField(widget=forms.PasswordInput())
@@ -15,4 +15,10 @@ class EmpresaForm(forms.ModelForm):
     class Meta:
         model = Empresa
         fields = ['nome', 'senha', 'cpf', 'estado', 'cidade', 'rua', 'numero', 'complemento', 'atuacao', 'img_perfil', 'descricao', 'linguagens']
+
+class ExperienciaForm(forms.ModelForm):
+
+    class Meta:
+        model = Exp_pessoa
+        fields = ['valores']
         

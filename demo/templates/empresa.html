@@ -1,9 +1,85 @@
-{% extends 'shared/base_logado.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
 
-{% block conteudo %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Assistant|Liu+Jian+Mao+Cao|Montserrat&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style_logado.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style_empresa.css' %}">
+    <title>Document</title>
+</head>
 
-<h1>{{ empresa.nome }}</h1>
-<p>{{ empresa.cidade }}</p>
-<img src="{{ empresa.img_perfil.url }}">
+<body>
+    <nav class="purple">
+        <h1 class="logo">Emprega<span class="logo-green">+</span></h1>
+        <a href="/">sair</a>
+    </nav>
+    <header>
+        <div class="img">
+            <img id="img_perfil" src="{{ empresa.img_perfil.url }}">
+        </div>
+        <div class="empresa">
+            <h1>{{ empresa.nome }}</h1>
+            <h4>Empresa do ramo de {{ empresa.atuacao }}</h4>
+            <p>{{ empresa.cidade }}</p>
+            <p>{{ empresa.rua }} {{ empresa.numero }}, {{empresa.complemento}}</p>
+        </div>
+    </header>
+    <section class="descricao">
+        <h2>Descrição sobre a empresa</h2>
+        <p>{{ empresa.descricao }}</p>
+        <p>Nossas linguagens mais usadas são: {{ empresa.linguagens }}.</p> 
+        <p>Para ver o conteúdo dessa linguagem, <a href="/conteudo/{{pessoa.id}}">clique aqui</a></p>
+    </section>
+    <section class="projeto">
+        <div class="titulo">
+            <h2>Projetos para a comunidade</h2>
+        </div>
+        <div class="proj-banner">
+            <div class="banner border-brown">
+                <div class="bg-banner-1">
+                </div>
+                <h3>50+</h3>
+                <p>Dando um novo recomeço para quem trilhou uma longa jornada, mas tem sede de continuar</p>
+                <a href="#">SAIBA MAIS</a>
+                </a>
+            </div>
+            <div class="banner border-blue">
+                <div class="bg-banner-2">
+                </div>
+                <h3>Mulheres</h3>
+                <p>Dando um novo recomeço para quem trilhou uma longa jornada, mas tem sede de continuar</p>
+                <a href="#">SAIBA MAIS</a>
+                </a>
+            </div>
+            <div class="banner border-green">
+                <div class="bg-banner-3">
+                </div>
+                <h3>PCD</h3>
+                <p>Dando um novo recomeço para quem trilhou uma longa jornada, mas tem sede de continuar</p>
+                <a href="#">SAIBA MAIS</a>
+                </a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div>
+            <h2>Emprega<span class="logo-green">+</span></h2>
+        </div>
+        <div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Empresas</a></li>
+                <li><a href="#">Perfil do Candidato</a></li>
+                <li><a href="#">Cursos</a></li>
+                <li><a href="#">Vagas</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
 
-{% endblock %}
+</html>

@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from demo.models import Pessoa, Empresa, Exp_pessoa
 from demo import views
 from .forms import *
+from django.db import connection
 
 def conteudo(request, id):
     pessoa = Pessoa.objects.filter(id=id).first()
@@ -11,26 +12,20 @@ def conteudo(request, id):
     return render(request, 'conteudo.html', contexto)
 
 def experiencia(request, id):
-    contexto = {
-        'id': id
-    }
-    print('aq')
+    pessoa = Pessoa.objects.filter(id=id).first()
     if request.method == 'POST':
-        pessoa = Pessoa()
-        user = Pessoa.objects.filter(id=id).first()
-        nome = user.nome
-        exp = Exp_pessoa()
-        exp.experiencia = user
-        exp.valores = request.POST.get('exp')
-        exp.save()
-        print('ve se foi')
-        contexto = {
-            'id': id,
-            'msg': 'Salvo com sucesso'
-        }
-        valor = '/experiencia/' + str(id)
-        return redirect(valor)
-    return render(request, 'experiencia.html', contexto)
+        form = ExperienciaForm(request.POST)
+        form.valores = request.POST.get('valores')
+        print(id)
+        if form.is_valid:
+            cursor = connection.cursor()
+            cursor.execute('INSERT INTO Exp_pessoa(experiencia, valores) VALUES (id, %s)', [id, form.valores])
+            return redirect('/experiencia/' + str(id))
+        
+    else:
+        form = ExperienciaForm()
+
+    return render(request, 'experiencia.html', { 'pessoa': pessoa, 'form': form})
 
 
 def procura_empresa(request, id):

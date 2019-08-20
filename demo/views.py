@@ -25,6 +25,7 @@ def login(request):
         email_form = request.POST.get('email')
         senha_form = request.POST.get('senha')
         usuario = Pessoa.objects.filter(email=email_form).first()
+        exp = Exp_pessoa.objects.filter(experiencia=usuario.id)
         
     
         if usuario is None:
@@ -42,7 +43,7 @@ def login(request):
         else:
             contexto = {
                 'pessoa': usuario,
-                # 'exp': exp,
+                'exp': exp,
             }
             return render(request, 'usuario.html', contexto)
 

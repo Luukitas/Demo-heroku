@@ -10,9 +10,28 @@ function mudar() {
     }
 }
 
-window.onscroll = function() { mudar() }
+window.onscroll = function () { mudar() }
 
 function mudaCor() {
     let back = document.querySelector('body')
     back.classList.toggle('gray');
+}
+
+function mudaLogin() {
+    let usuario = document.getElementById('usuario')
+    let empresa = document.getElementById('empresa')
+    let divUsuario = document.getElementById('divUsuario')
+    let divEmpresa = document.getElementById('divEmpresa')
+
+    usuario.classList.toggle('ativo')
+    empresa.classList.toggle('ativo')
+
+    if(usuario.classList.contains('ativo')){
+        divUsuario.classList.remove('none')
+        divEmpresa.classList.add('none')
+    }else if(empresa.classList.contains('ativo')){
+        divUsuario.classList.add('none')
+        divEmpresa.classList.remove('none')
+    }
+    
 }

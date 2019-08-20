@@ -53,7 +53,7 @@ b {
     color: #5BFF2E;
 }
 
-section {
+/* section {
     align-items: center;
     background-color: white;
     color: coral;
@@ -64,12 +64,7 @@ section {
     justify-content: space-evenly;
     padding: 30px;
     width: 100vw;
-}
-
-p {
-    width: 70vw;
-    height: 100px;
-}
+} */
 
 main {
     align-items: center;
@@ -77,9 +72,7 @@ main {
     color: #0A0BCC;
     display: flex;
     flex-direction: column;
-    font-size: 23px;
-    height: 700px;
-    justify-content: space-evenly;
+    font-size: 18px;
     padding: 30px;
     width: 100vw;
 }
@@ -87,7 +80,6 @@ main {
 .campanhas {
     align-items: center;
     display: flex;
-    height: 70px;
     justify-content: center;
     flex-direction: column;
 }
@@ -105,7 +97,7 @@ aside {
     width: 100vw;
 }
 
-.container_imagem_idealizadores {
+/* .container_imagem_idealizadores {
     align-items: center;
     display: flex;
     height: 300px;
@@ -189,7 +181,7 @@ aside {
     font-size: 25px;
     height: 50px;
     width: 10vw;
-}
+} */
 
 footer {
     align-items: center;
@@ -203,7 +195,7 @@ footer {
     width: 100vw;
 }
 
-.texto_footer_titulo {
+/* .texto_footer_titulo {
     align-items: center;
     background-color: purple;
     color: white;
@@ -227,4 +219,37 @@ footer {
     justify-content: space-evenly;
     padding: 30px;
     width: 100vw;
+} */
+
+.idealizadores{
+    flex-direction: column;
+    width: 20%;
+}
+
+.idealizadores p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+}
+
+.idealizadores img{
+    height: 40px;
+    width: 40px;
+}
+
+.idealizadores div{
+    align-items: center;
+    display: flex;
+    flex-direction: row !important;
+    justify-content: space-evenly;
+}
+
+.idealizadores-div{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.idealizadores-div div{
+    flex-direction: initial !important;
 }

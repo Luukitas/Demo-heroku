@@ -89,7 +89,7 @@ input[type='password']:focus {
     outline: none;
 }
 
-.log input[type='submit'] {
+.log input[type='submit'], .btn {
     background-color: #fff;
     border: 1px solid #000;
     border-radius: 8px;
@@ -101,7 +101,7 @@ input[type='password']:focus {
     width: 100px;
 }
 
-.log input[type='submit']:hover {
+.log input[type='submit']:hover, .btn:hover {
     background-color: rgb(245, 245, 245);
 }
 
@@ -125,7 +125,36 @@ input[type='password']:focus {
 
 .alert {
     color: red;
-    padding: 10px;
+    padding: 3px;
+}
+
+.btn-log{
+    align-items: center;
+    border-bottom: 0.5px solid salmon;
+    display: flex;
+    flex-direction: row !important;
+    width: 90%;
+}
+
+.btn-log a{
+    text-align: center;
+    width: 50%;
+}
+
+.none{
+    display: none !important;
+}
+
+.w-100{
+    width: 100% !important;
+}
+
+.h-auto{
+    height: auto !important;
+}
+
+.ativo{
+    border-bottom: 3px solid salmon;
 }
 
 @media only screen and (max-width: 500px) {
